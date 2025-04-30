@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/user/:id', (req, res) => {
-  // Insecure: directly using user input in SQL
+  // Insecure: Directly using user input in SQL
   const sql = "SELECT * FROM users WHERE id = " + req.params.id;
   res.send("Query: " + sql);
 });
